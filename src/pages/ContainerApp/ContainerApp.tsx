@@ -1,12 +1,18 @@
-import { Box, styled } from '@mui/material'
+import { Box, Stack, styled } from '@mui/material'
 import ContainerConversation from './components/ContainerConversation'
-import Sidebar from './components/Sidebar'
+import Sidebar from '../../components/Sidebar/Sidebar'
 
 const ContainerApp = () => {
   return (
     <StyledContainer>
-      <Sidebar />
-      <ContainerConversation />
+      <Stack direction="row" width={'100%'}>
+        <Box sx={{ width: '35%' }} id="side-bar">
+          <Sidebar />
+        </Box>
+        <Box sx={{ width: '65%' }}>
+          <ContainerConversation />
+        </Box>
+      </Stack>
     </StyledContainer>
   )
 }
@@ -18,7 +24,8 @@ const StyledContainer = styled(Box)`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.3) 0%,
