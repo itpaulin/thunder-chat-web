@@ -5,7 +5,7 @@
   text-align: center;
 }
 body {
-  background-image: url('/public/bgpunk.png');
+  background-image: url('/bgpunk.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
